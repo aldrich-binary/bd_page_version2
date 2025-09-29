@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export const Navbar = () => {
@@ -9,37 +10,37 @@ export const Navbar = () => {
     <nav className="py-6 border-b">
       <div className="container mx-auto px-4">
         <div className="relative flex items-center justify-between">
-          <a href="/" className="inline-block">
+          <Link href="/" className="inline-block">
             <div className="h-8 w-32 bg-teal-900 rounded flex items-center justify-center text-white font-bold">
               BDP
             </div>
-          </a>
+          </Link>
           <ul className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex">
             <li className="mr-8">
-              <a
+              <Link
                 className="inline-block text-teal-900 hover:text-teal-700 font-medium"
                 href="/services"
               >
                 Servicios
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 className="inline-block text-teal-900 hover:text-teal-700 font-medium"
                 href="/contact"
               >
                 Contactanos
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="flex items-center justify-end">
             <div className="hidden md:block">
-              <a
-                href="/consultation"
+              <Link
+                href="/contact"
                 className="inline-flex py-2.5 px-4 items-center justify-center text-sm font-medium text-teal-900 hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200"
               >
                 Consulta gratis
-              </a>
+              </Link>
             </div>
             <button
               onClick={() => setMobileNavOpen(!mobileNavOpen)}

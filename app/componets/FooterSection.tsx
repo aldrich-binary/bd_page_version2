@@ -9,8 +9,8 @@ export const FooterSection = () => {
         </div>
 
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-          consequuntur amet culpa cum itaque neque.
+          Excelencia jurídica y estrategia legal integral para proteger sus
+          intereses y alcanzar sus objetivos con la máxima seguridad jurídica.
         </p>
 
         <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
@@ -19,8 +19,7 @@ export const FooterSection = () => {
               className="text-gray-700 transition hover:text-gray-700/75"
               href="#"
             >
-              {" "}
-              About{" "}
+              Services
             </a>
           </li>
 
@@ -29,48 +28,7 @@ export const FooterSection = () => {
               className="text-gray-700 transition hover:text-gray-700/75"
               href="#"
             >
-              {" "}
-              Careers{" "}
-            </a>
-          </li>
-
-          <li>
-            <a
-              className="text-gray-700 transition hover:text-gray-700/75"
-              href="#"
-            >
-              {" "}
-              History{" "}
-            </a>
-          </li>
-
-          <li>
-            <a
-              className="text-gray-700 transition hover:text-gray-700/75"
-              href="#"
-            >
-              {" "}
-              Services{" "}
-            </a>
-          </li>
-
-          <li>
-            <a
-              className="text-gray-700 transition hover:text-gray-700/75"
-              href="#"
-            >
-              {" "}
-              Projects{" "}
-            </a>
-          </li>
-
-          <li>
-            <a
-              className="text-gray-700 transition hover:text-gray-700/75"
-              href="#"
-            >
-              {" "}
-              Blog{" "}
+              Contacto
             </a>
           </li>
         </ul>

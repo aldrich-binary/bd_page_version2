@@ -1,15 +1,30 @@
+import AnimatedContent from "@/components/AnimatedContent";
+
 export const ResultSections = () => {
   return (
     <section className="py-12 lg:py-24 bg-teal-900">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
-          <h2 className="font-heading text-6xl text-white mb-6">
-            Nuestros Resultados
-          </h2>
-          <p className="text-lg text-white opacity-80">
-            Estamos comprometidos contigo.
-          </p>
-        </div>
+        <AnimatedContent
+          distance={100}
+          direction="vertical"
+          reverse={true}
+          duration={1.2}
+          ease="power3.out"
+          initialOpacity={0.2}
+          animateOpacity
+          scale={1.1}
+          threshold={0.2}
+          delay={0}
+        >
+          <div className="text-center mb-20">
+            <h2 className="font-heading text-6xl text-white mb-6 animate__animated animate__fadeInUp animate__delay-1s">
+              Nuestros Resultados
+            </h2>
+            <p className="text-lg text-white opacity-80">
+              Estamos comprometidos contigo.
+            </p>
+          </div>
+        </AnimatedContent>
         <div className="max-w-md mx-auto lg:max-w-none">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
@@ -109,6 +124,7 @@ export const ResultSections = () => {
                 </p>
               </div>
             </div>
+
             <div className="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
               <div className="h-full py-10 px-5 xs:px-10 bg-white rounded-2xl shadow-md">
                 <svg
@@ -138,12 +154,14 @@ export const ResultSections = () => {
                   Clientes Atendidos
                 </span>
                 <p className="text-gray-700">
-                  With gratitude, we celebrate the trust of over 2,000 satisfied
-                  clients. Your confidence fuels our dedication to providing
-                  exceptional legal service and forging lasting relationships.
+                  Con gratitud, celebramos la confianza de más de 2,000 clientes
+                  satisfechos. Su confianza impulsa nuestra dedicación para
+                  brindar un servicio legal excepcional y forjar relaciones
+                  duraderas.
                 </p>
               </div>
             </div>
+
             <div className="w-full lg:w-1/3 px-4">
               <div className="h-full py-10 px-5 xs:px-10 bg-white rounded-2xl shadow-md">
                 <svg
@@ -166,12 +184,12 @@ export const ResultSections = () => {
                   95%
                 </h5>
                 <span className="text-gray-600 block mb-6 text-base lg:text-xl font-medium">
-                  Success Rate
+                  Tasa de Éxito
                 </span>
                 <p className="text-gray-700">
-                  Embracing excellence, we are delighted to report a 95% success
-                  rate. This milestone reflects our ongoing commitment to
-                  achieving the best possible outcomes for our clients.
+                  Este hito refleja nuestro compromiso continuo con el objetivo
+                  de lograr los mejores resultados posibles para nuestros
+                  clientes.
                 </p>
               </div>
             </div>
