@@ -1,59 +1,35 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-
-interface TeamMember {
-  id: number;
-  name: string;
-  title: string;
-  image: string;
-}
-
-const teamMembers: TeamMember[] = [
-  {
-    id: 1,
-    name: "Jenny Wilson",
-    title: "Senior Sustainability Consultant",
-    image:
-      "https://images.unsplash.com/photo-1662104935883-e9dd0619eaba?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 2,
-    name: "Cameron Williamson",
-    title: "Senior Sustainability Consultant",
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 3,
-    name: "Courtney Henry",
-    title: "Energy Analyst",
-    image:
-      "https://images.unsplash.com/photo-1637689810282-4692c7677feb?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 4,
-    name: "Dianne Russell",
-    title: "Senior Renewable Energy Engineer",
-    image:
-      "https://images.unsplash.com/photo-1557763686-f6109142f4a6?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 5,
-    name: "Jenny Wilson",
-    title: "Senior Sustainability Consultant",
-    image:
-      "https://images.unsplash.com/photo-1647985070631-ec6a2707b2f7?q=80&w=685&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-];
+import { teamMembers } from "../team-data";
 
 export function TeamSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerView = 4;
+  const [itemsPerView, setItemsPerView] = useState(4);
+
+  // Adjust items per view based on screen size
+  React.useEffect(() => {
+    const updateItemsPerView = () => {
+      if (window.innerWidth < 768) {
+        setItemsPerView(1);
+      } else if (window.innerWidth < 1024) {
+        setItemsPerView(2);
+      } else if (window.innerWidth < 1280) {
+        setItemsPerView(3);
+      } else {
+        setItemsPerView(4);
+      }
+    };
+
+    updateItemsPerView();
+    window.addEventListener("resize", updateItemsPerView);
+    return () => window.removeEventListener("resize", updateItemsPerView);
+  }, []);
+
   const maxIndex = Math.max(0, teamMembers.length - itemsPerView);
 
   const nextSlide = () => {
@@ -72,8 +48,10 @@ export function TeamSection() {
             Conoce a nuestro equipo
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl text-pretty">
-            Nuestro equipo es experto en resolver controversias complejas y
-            brindar asesoría estratégica a entidades públicas y privadas.
+            Nuestro equipo de profesionales del derecho cuenta con una amplia
+            trayectoria en la práctica del derecho público y disciplinas
+            relacionadas, orientados a la solución de problemas y la entrega de
+            valor agregado a nuestros clientes.
           </p>
         </div>
 
@@ -126,12 +104,36 @@ export function TeamSection() {
                   />
                   <div className="absolute inset-0 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl font-semibold mb-1 text-balance">
-                      {member.name}
-                    </h3>
-                    <p className="text-sm text-white/90 text-pretty">
-                      {member.title}
-                    </p>
+                    <div className="bg-black/60 backdrop-blur-sm rounded-lg p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span
+                          className={cn(
+                            "px-2 py-1 rounded-full text-xs font-medium",
+                            member.category === "socio" &&
+                              "bg-teal-500 text-white",
+                            member.category === "abogado" &&
+                              "bg-blue-500 text-white",
+                            member.category === "pasante" &&
+                              "bg-gray-500 text-white"
+                          )}
+                        >
+                          {member.category === "socio"
+                            ? "Socio"
+                            : member.category === "abogado"
+                            ? "Abogado"
+                            : "Asociado"}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-semibold mb-1 text-balance">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm text-white/90 text-pretty">
+                        {member.title}
+                      </p>
+                      <p className="text-xs text-white/80 text-pretty mt-2 line-clamp-3">
+                        {member.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </Card>

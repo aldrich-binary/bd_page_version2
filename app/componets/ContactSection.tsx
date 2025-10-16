@@ -66,8 +66,9 @@ const ContactSection = () => {
                       Contactanos
                     </h1>
                     <p className="text-lg text-gray-700 mb-16">
-                      Estamos aquí para ayudarte con tus asuntos legales y
-                      proteger tus derechos.
+                      Estamos aquí para brindarte asesoría especializada en
+                      derecho público y resolver controversias complejas con
+                      entidades públicas y privadas.
                     </p>
                     <form onSubmit={handleSubmit}>
                       <label
@@ -152,16 +153,22 @@ const ContactSection = () => {
                           <option value="Select service">
                             Selecciona un servicio
                           </option>
-                          <option value="Corporate Law">Corporate Law</option>
-                          <option value="Family Law">Derecho Familiar</option>
-                          <option value="Criminal Defense">
-                            Defensa Criminal
+                          <option value="Litigio en Derecho Público">
+                            Litigio en Derecho Público
                           </option>
-                          <option value="Personal Injury">
-                            Personal Injury
+                          <option value="Derecho Regulatorio y Debido Cumplimiento">
+                            Derecho Regulatorio y Debido Cumplimiento
                           </option>
-                          <option value="Real Estate">Real Estate</option>
-                          <option value="Employment Law">Employment Law</option>
+                          <option value="Contratación Pública y Proyectos Estratégicos">
+                            Contratación Pública y Proyectos Estratégicos
+                          </option>
+                          <option value="Derecho de la Energía y Sustentabilidad">
+                            Derecho de la Energía y Sustentabilidad
+                          </option>
+                          <option value="Consultoría en Política Pública">
+                            Consultoría en Política Pública
+                          </option>
+                          <option value="Inmobiliario">Inmobiliario</option>
                         </select>
                       </div>
 
@@ -210,7 +217,7 @@ const ContactSection = () => {
                     Nos pondremos en contacto contigo dentro de 2 días hábiles
                   </p>
                   <p className="mt-8 text-lg font-medium">
-                    contact@firmalegal.com
+                    carlos.lezama@bdplc.com
                   </p>
                 </div>
               </div>
@@ -226,8 +233,8 @@ const ContactSection = () => {
                   <p className="text-gray-700">
                     Estamos disponibles de lunes a viernes
                   </p>
-                  <p className="text-gray-700 mb-auto">from 8 AM until 6 PM</p>
-                  <p className="mt-8 text-lg font-medium">(+57) 317 890 1234</p>
+                  <p className="text-gray-700 mb-auto">de 9 AM a 6 PM</p>
+                  <p className="mt-8 text-lg font-medium">(+52) 55 1234 5678</p>
                 </div>
               </div>
               <div className="w-full sm:w-1/2 md:w-1/3 px-4">
@@ -241,9 +248,7 @@ const ContactSection = () => {
                   <p className="text-gray-700 mb-auto">
                     Visítanos en nuestra oficina
                   </p>
-                  <p className="mt-8 text-lg font-medium">
-                    123 Plaza Legal Drive
-                  </p>
+                  <p className="mt-8 text-lg font-medium">Prado Sur 245</p>
                   <p className="text-lg font-medium">
                     Lomas de Chapultepec, CDMX
                   </p>

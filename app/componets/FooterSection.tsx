@@ -9,24 +9,32 @@ export const FooterSection = () => {
         </div>
 
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-          Excelencia jurídica y estrategia legal integral para proteger sus
-          intereses y alcanzar sus objetivos con la máxima seguridad jurídica.
+          Firma especializada en litigio y consultoría multidisciplinaria en
+          derecho público, orientados a la solución de problemas y la entrega de
+          valor agregado a nuestros clientes.
         </p>
+
+        <div className="mt-8 text-center">
+          <p className="text-gray-600 mb-2">
+            Prado Sur 245, Lomas de Chapultepec, CDMX
+          </p>
+          <p className="text-gray-600">carlos.lezama@bdplc.com</p>
+        </div>
 
         <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
           <li>
             <a
               className="text-gray-700 transition hover:text-gray-700/75"
-              href="#"
+              href="/services"
             >
-              Services
+              Servicios
             </a>
           </li>
 
           <li>
             <a
               className="text-gray-700 transition hover:text-gray-700/75"
-              href="#"
+              href="/contact"
             >
               Contacto
             </a>

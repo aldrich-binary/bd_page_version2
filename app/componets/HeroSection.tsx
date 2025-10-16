@@ -3,16 +3,16 @@ import Image from "next/image";
 
 export const HeroSection = () => {
   return (
-    <div className="relative pt-18 min-h-[100vh]">
+    <div className="relative pt-18 min-h-[100vh] overflow-hidden">
       <Image
-        className="hidden md:block absolute top-0 left-0 mt-28 w-32 lg:w-64 xl:w-auto rounded-xl animate__animated animate__fadeInLeft animate__delay-1s"
+        className="hidden lg:block absolute top-0 left-0 mt-28 w-48 xl:w-64 2xl:w-auto rounded-xl animate__animated animate__fadeInLeft animate__delay-1s z-10"
         src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=300&h=400&fit=crop"
         alt="Legal consultation"
         width={300}
         height={400}
       />
       <Image
-        className="hidden md:block absolute top-0 right-0 mt-20 w-32 lg:w-68 xl:w-auto rounded-xl animate__animated animate__fadeInDown animate__delay-1s"
+        className="hidden lg:block absolute top-0 right-0 mt-20 w-48 xl:w-64 2xl:w-auto rounded-xl animate__animated animate__fadeInDown animate__delay-1s z-10"
         src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Legal books"
         width={350}
@@ -28,44 +28,46 @@ export const HeroSection = () => {
               ></span>
             </Badge>
             <span className="text-sm font-medium text-black ">
-              Defendiendo tus Derechos.
+              Litigio y Consultoría en Derecho Público
             </span>
           </div>
           <h2 className="text-black text-center font-heading text-5xl xs:text-7xl xl:text-7xl tracking-tight mb-8 font-semibold animate__animated animate__fadeInUp ">
-            Representacion Legal Experta.
+            Especialistas en Derecho Público
           </h2>
           <p className="text-lg text-gray-600 mb-10 animate__animated animate__fadeInUp">
-            BDP es un equipo especializado en resolver controversias complejas y
-            brindar asesoría estratégica a entidades públicas y privadas.
+            Firma especializada en litigio y consultoría multidisciplinaria en
+            derecho público, con amplia trayectoria en ramas constitucional,
+            administrativa, regulatoria y electoral. Orientados a la solución de
+            problemas y la entrega de valor agregado a nuestros clientes.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="/services"
-              className="inline-flex py-4 px-6 mb-3 sm:mb-0 sm:mr-4 items-center justify-center text-lg font-medium text-white hover:text-teal-900 border border-teal-900 hover:border-lime-500 bg-teal-900 hover:bg-lime-500 rounded-full transition duration-200"
+              className="inline-flex py-4 px-8 items-center justify-center text-lg font-medium text-white hover:text-teal-900 border border-teal-900 hover:border-lime-500 bg-teal-900 hover:bg-lime-500 rounded-full transition duration-200 shadow-lg hover:shadow-xl"
             >
-              Nuestro Servicio Legal
+              Nuestros Servicios
             </a>
             <a
               href="/contact"
-              className="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-black hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200"
+              className="inline-flex py-4 px-8 items-center justify-center text-lg font-medium text-black hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200 shadow-lg hover:shadow-xl"
             >
               Agenda una Consulta
             </a>
           </div>
         </div>
-        <div className="flex -mx-4 items-end relative">
-          <div className="w-1/3 xs:w-1/2 lg:w-auto px-4">
+        <div className="flex -mx-4 items-end relative mt-8 lg:mt-0">
+          <div className="w-1/2 lg:w-auto px-4">
             <Image
-              className="block w-1/2 md:w-64 lg:w-auto ml-auto rounded-lg animate__animated animate__fadeInRight animate__delay-1s"
+              className="block w-full max-w-xs lg:w-64 xl:w-auto ml-auto rounded-lg animate__animated animate__fadeInRight animate__delay-1s shadow-lg"
               src="https://images.unsplash.com/photo-1589216532372-1c2a367900d9?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Lawyer in office"
               width={300}
               height={400}
             />
           </div>
-          <div className="w-2/3 xs:w-1/2 lg:w-auto ml-auto px-4">
+          <div className="w-1/2 lg:w-auto px-4">
             <Image
-              className="block w-1/2 md:w-64 lg:w-auto ml-auto rounded-lg animate__animated animate__fadeInDown animate__delay-1s"
+              className="block w-full max-w-xs lg:w-64 xl:w-auto ml-auto rounded-lg animate__animated animate__fadeInDown animate__delay-1s shadow-lg"
               src="https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?w=300&h=400&fit=crop"
               alt="Legal team meeting"
               width={400}

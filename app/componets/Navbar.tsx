@@ -18,7 +18,7 @@ export const Navbar = () => {
           <ul className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex">
             <li className="mr-8">
               <Link
-                className="inline-block text-teal-900 hover:text-teal-700 font-medium"
+                className="inline-block text-teal-900 hover:text-teal-700 font-medium transition-colors"
                 href="/services"
               >
                 Servicios
@@ -26,10 +26,10 @@ export const Navbar = () => {
             </li>
             <li>
               <Link
-                className="inline-block text-teal-900 hover:text-teal-700 font-medium"
+                className="inline-block text-teal-900 hover:text-teal-700 font-medium transition-colors"
                 href="/contact"
               >
-                Contactanos
+                Contacto
               </Link>
             </li>
           </ul>
@@ -88,17 +88,24 @@ export const Navbar = () => {
       >
         <div
           onClick={() => setMobileNavOpen(false)}
-          className="fixed inset-0 bg-violet-900 opacity-20"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm"
         ></div>
-        <nav className="relative flex flex-col py-7 px-10 w-full h-full bg-white overflow-y-auto">
-          <div className="flex items-center justify-between">
-            <a href="#" className="inline-block">
+        <nav className="relative flex flex-col py-7 px-6 w-full h-full bg-white overflow-y-auto shadow-2xl">
+          <div className="flex items-center justify-between mb-8">
+            <Link
+              href="/"
+              onClick={() => setMobileNavOpen(false)}
+              className="inline-block"
+            >
               <div className="h-8 w-32 bg-teal-900 rounded flex items-center justify-center text-white font-bold">
                 BDP
               </div>
-            </a>
+            </Link>
             <div className="flex items-center">
-              <button onClick={() => setMobileNavOpen(false)}>
+              <button
+                onClick={() => setMobileNavOpen(false)}
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              >
                 <svg
                   width="32"
                   height="32"
@@ -117,25 +124,38 @@ export const Navbar = () => {
               </button>
             </div>
           </div>
-          <div className="pt-20 pb-12 mb-auto">
-            <ul className="flex-col">
-              <li className="mb-6">
-                <a
-                  className="inline-block text-teal-900 hover:text-teal-700 font-medium"
+
+          <div className="flex-1">
+            <ul className="space-y-6">
+              <li>
+                <Link
+                  className="block text-lg text-teal-900 hover:text-teal-700 font-medium py-3 px-4 rounded-lg hover:bg-teal-50 transition-colors"
                   href="/services"
+                  onClick={() => setMobileNavOpen(false)}
                 >
                   Servicios
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  className="inline-block text-teal-900 hover:text-teal-700 font-medium"
+                <Link
+                  className="block text-lg text-teal-900 hover:text-teal-700 font-medium py-3 px-4 rounded-lg hover:bg-teal-50 transition-colors"
                   href="/contact"
+                  onClick={() => setMobileNavOpen(false)}
                 >
-                  Contactanos.
-                </a>
+                  Contacto
+                </Link>
               </li>
             </ul>
+
+            <div className="mt-8 pt-8 border-t border-gray-200">
+              <Link
+                href="/contact"
+                onClick={() => setMobileNavOpen(false)}
+                className="block w-full py-3 px-6 text-center text-sm font-medium text-white bg-teal-900 hover:bg-teal-800 rounded-full transition-colors"
+              >
+                Consulta gratis
+              </Link>
+            </div>
           </div>
         </nav>
       </div>
