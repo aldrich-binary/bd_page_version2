@@ -55,27 +55,6 @@ export const HeroSection = () => {
             </a>
           </div>
         </div>
-        <div className="flex -mx-4 items-end relative mt-8 lg:mt-0">
-          <div className="w-1/2 lg:w-auto px-4">
-            <Image
-              className="block w-full max-w-xs lg:w-64 xl:w-auto ml-auto rounded-lg animate__animated animate__fadeInRight animate__delay-1s shadow-lg"
-              src="https://images.unsplash.com/photo-1589216532372-1c2a367900d9?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Lawyer in office"
-              width={300}
-              height={400}
-            />
-          </div>
-          <div className="w-1/2 lg:w-auto px-4">
-            <Image
-              className="block w-full max-w-xs lg:w-64 xl:w-auto ml-auto rounded-lg animate__animated animate__fadeInDown animate__delay-1s shadow-lg"
-              src="https://images.unsplash.com/photo-1479142506502-19b3a3b7ff33?w=300&h=400&fit=crop"
-              alt="Legal team meeting"
-              width={400}
-              height={400}
-            />
-          </div>
-          <div className="absolute bottom-0 left-0 w-full py-32 bg-gradient-to-t from-orange-50 to-transparent"></div>
-        </div>
       </div>
     </div>
   );
